@@ -1,0 +1,124 @@
+name: yay_collect
+description: 游啊游-采集端
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.2.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #网络请求库
+  dio: ^3.0.9
+  #网络检测
+#  connectivity: ^0.4.8+1
+  #屏幕适配
+  flutter_screenutil: ^1.0.2
+  #拍照、查看系统相册
+  image_picker: ^0.6.3+4
+  #获取设备信息
+  device_info: ^0.4.1+5
+  #Toast提示
+  fluttertoast: ^3.1.3
+  #路由插件(页面跳转)
+  fluro: ^1.5.2
+  #日期，正则，倒计时，定时任务，时间轴等工具类
+  common_utils: ^1.1.3
+  #日期格式化
+  date_format: ^1.0.8
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  #阿里巴巴flutter_boost框架
+  flutter_boost: ^1.12.13+1
+  #城市选择
+  azlistview: ^0.1.2
+  lpinyin: ^1.0.7
+  #返回按钮拦截器
+  back_button_interceptor: ^4.2.3
+  #本地存储
+  shared_preferences: ^0.5.7+3
+  # flutter_baidu_map: ^0.0.5
+  permission_handler: ^5.0.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  
+  module:
+    androidX: true
+    androidPackage: com.jxp.yay.caiji
+    iosBundleIdentifier: com.jxp.yay.caiji
+  assets:
+    - assets/images/dl_bg.png
+    - assets/images/2.0x/dl_bg.png
+    - assets/images/3.0x/dl_bg.png
+
+    - assets/images/xh.png
+    - assets/images/2.0x/xh.png
+    - assets/images/3.0x/xh.png
+
+    - assets/images/txxx.png
+    - assets/images/2.0x/txxx.png
+    - assets/images/3.0x/txxx.png  
+
+    - assets/images/login_button.png
+    - assets/images/2.0x/login_button.png
+    - assets/images/3.0x/login_button.png   
+
+    - assets/images/login_button_bg.png
+    - assets/images/2.0x/login_button_bg.png
+    - assets/images/3.0x/login_button_bg.png
+
+    - assets/images/jqxz_jt.png
+    - assets/images/2.0x/jqxz_jt.png
+    - assets/images/3.0x/jqxz_jt.png
+
+    - assets/images/tx.png
+    - assets/images/2.0x/tx.png
+    - assets/images/3.0x/tx.png
+
+    - assets/images/Home_search.png
+    - assets/images/2.0x/Home_search.png
+    - assets/images/3.0x/Home_search.png
+
+    - assets/images/mhss_delete.png
+    - assets/images/2.0x/mhss_delete.png
+    - assets/images/3.0x/mhss_delete.png
+
+    - assets/images/Home_positioning.png
+    - assets/images/2.0x/Home_positioning.png
+    - assets/images/3.0x/Home_positioning.png
+
+    - assets/images/dylb_NaviBar_return.png
+    - assets/images/2.0x/dylb_NaviBar_return.png
+    - assets/images/3.0x/dylb_NaviBar_return.png
+
+    - assets/images/jqjq_cjcg.png
+    - assets/images/2.0x/jqjq_cjcg.png
+    - assets/images/3.0x/jqjq_cjcg.png
+
+    - assets/images/grzx_xgmm.png
+    - assets/images/2.0x/grzx_xgmm.png
+    - assets/images/3.0x/grzx_xgmm.png
+
+    - assets/images/bs_bg.png
+    - assets/images/2.0x/bs_bg.png
+    - assets/images/3.0x/bs_bg.png
+
+    - assets/images/zc_back.png
+    - assets/images/2.0x/zc_back.png
+    - assets/images/3.0x/zc_back.png
+
+
+fonts:
+  - family: Alibaba-PuHuiTi
+    fonts:
+      - asset: assets/fonts/Alibaba-PuHuiTi-Bold.ttf
+      - asset: assets/fonts/Alibaba-PuHuiTi-Heavy.ttf
+      - asset: assets/fonts/Alibaba-PuHuiTi-Light.ttf
+      - asset: assets/fonts/Alibaba-PuHuiTi-Medium.ttf
+      - asset: assets/fonts/Alibaba-PuHuiTi-Regular.ttf
