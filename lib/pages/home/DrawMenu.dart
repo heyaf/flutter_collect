@@ -1,4 +1,4 @@
-import 'package:fluro/src/router.dart';
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:yay_collect/config/FontsConfig.dart';
 import 'package:yay_collect/pages/login/UserLogin.dart';

@@ -17,8 +17,8 @@ import '../../config/HttpUrlServices.dart';
 import '../../utils/ToastUtils.dart';
 
 class UserRegist extends StatefulWidget {
-  Router router;
-  UserRegist(Router router, {Key key}) {
+  FluroRouter router;
+  UserRegist(FluroRouter router, {Key key}) {
     this.router = router;
     this.countdown = 60;
   }
@@ -123,7 +123,7 @@ class _UserRegistState extends State<UserRegist> {
 //    getLocation();
     ScreenUtil.init(context, width: 750, height: 1334, allowFontScaling: true);
     return Scaffold(
-        resizeToAvoidBottomPadding: false,
+        // resizeToAvoidBottomPadding: false,
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
           child: Material(
@@ -398,7 +398,7 @@ class _UserRegistState extends State<UserRegist> {
                                 // }
                               });
                             } else {
-                              ToastUtils.showText(context, msg:'请输入正确的手机号码');
+                              ToastUtils.showText(context, msg: '请输入正确的手机号码');
                             }
                           }
                         : null,
@@ -771,18 +771,18 @@ class _UserRegistState extends State<UserRegist> {
         _passWordEditController.text.length == 0 ||
         _passWordTwoEditController.text.length == 0) {
     } else if (!checkPhoneNumber()) {
-      ToastUtils.showText(context, msg:'请输入正确的手机号码');
+      ToastUtils.showText(context, msg: '请输入正确的手机号码');
     } else if (getedCode.compareTo(_phoneCodeEditController.text.toString()) !=
             0 ||
         codePhone.compareTo(_phoneNumEditController.text.toString()) != 0) {
       print('验证码' + _phoneNumEditController.text.toString());
-      ToastUtils.showText(context, msg:'验证码错误，请重新获取验证码');
+      ToastUtils.showText(context, msg: '验证码错误，请重新获取验证码');
     } else if (_passWordEditController.text
             .compareTo(_passWordTwoEditController.text.toString()) !=
         0) {
-      ToastUtils.showText(context, msg:'两次密码输入不一致，请重新输入');
+      ToastUtils.showText(context, msg: '两次密码输入不一致，请重新输入');
     } else if (_passWordEditController.text.length < 6) {
-      ToastUtils.showText(context, msg:'密码长度应在6-20位之间，请重新输入');
+      ToastUtils.showText(context, msg: '密码长度应在6-20位之间，请重新输入');
     } else {
       yayUserRegist();
     }
@@ -809,7 +809,7 @@ class _UserRegistState extends State<UserRegist> {
         Navigator.of(context).pop();
       } else {
         List<String> datalist = dataValue.split('&');
-        ToastUtils.showText(context, msg:datalist[1]);
+        ToastUtils.showText(context, msg: datalist[1]);
       }
     } catch (e) {
       print(e);

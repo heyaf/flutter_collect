@@ -21,7 +21,7 @@ class PageComponent {
   }
 
   ///返回按钮(参数1context上下文，参数2图片宽，参数3图片高，参数4图片路径,参数5动画类型)
-  Widget returnIcon(Router router) {
+  Widget returnIcon(FluroRouter router) {
     return GestureDetector(
       child: Container(
         alignment: Alignment.topLeft,

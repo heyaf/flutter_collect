@@ -9,7 +9,7 @@ flutter项目—登录注册模块
 
 ![重置密码.png](https://upload-images.jianshu.io/upload_images/1431215-d4dfe03d08299782.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### 有几个技术点：
+### 几个技术点：
 **1. 输入框的监听**
 **2. 手机号的正则验证**
 **3. androidID获取设备唯一标识**

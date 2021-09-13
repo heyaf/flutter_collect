@@ -10,7 +10,7 @@ import 'router/Routes.dart';
 
 void main() {
   ///初始化并配置路由
-  final router = new Router();
+  final router = new FluroRouter();
   Routes.configureRoutes(router);
   runApp(MyApp());
 }
@@ -54,6 +54,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Flutter Boost example',
       // FlutterBoost初始化
       builder: FlutterBoost.init(postPush: _onRoutePushed),
+      // RouteSettings
       onGenerateRoute: Routes.router.generator,
       //去除右上角debug标记
       debugShowCheckedModeBanner: false,

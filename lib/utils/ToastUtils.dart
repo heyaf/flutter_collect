@@ -194,12 +194,12 @@ _HideCallback _showJhToast({
   Completer<VoidCallback> result = Completer<VoidCallback>();
 
   var backButtonName = 'funya$backButtonIndex';
-  BackButtonInterceptor.add((stopDefaultButtonEvent) {
-    result.future.then((hide) {
-      hide();
-    });
-    return true;
-  }, zIndex: backButtonIndex, name: backButtonName);
+  // BackButtonInterceptor.add((stopDefaultButtonEvent) {
+  //   result.future.then((hide) {
+  //     hide();
+  //   });
+  //   return true;
+  // }, zIndex: backButtonIndex, name: backButtonName);
   backButtonIndex++;
 
   var overlay = OverlayEntry(

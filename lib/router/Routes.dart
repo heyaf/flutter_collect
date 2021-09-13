@@ -1,12 +1,14 @@
 import 'package:fluro/fluro.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:yay_collect/pages/home/HomePage.dart';
 import '../pages/login/UserLogin.dart';
 import '../pages/login/UserRegist.dart';
 import '../pages/login/UserResetPass.dart';
 import '../pages/login/UserResetPassTwo.dart';
 import '../pages/citySelect/CitySelect.dart';
+
 class Routes {
-  static Router router;
+  static FluroRouter router;
   // static String userLoginPage = '/userLoginPage';
   static String userLoginPage = '/';
   static String userRegistPage = '/userRegist';
@@ -18,7 +20,7 @@ class Routes {
   // static String homePage = '/';
   static String homePage = '/homePage';
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(FluroRouter router) {
 //    router.define(page1,
 //        handler: Handler(handlerFunc: (context, params) => Page1()));
 //    router.define(page2, handler: Handler(handlerFunc: (context, params) {
@@ -31,25 +33,27 @@ class Routes {
         handler: Handler(handlerFunc: (context, params) => UserLogin(null)));
 
     ///注册页
-    router.define(userRegistPage, 
+    router.define(userRegistPage,
         handler: Handler(handlerFunc: (context, params) => UserRegist(router)));
 
     ///首页
-    router.define(homePage, 
+    router.define(homePage,
         handler: Handler(handlerFunc: (context, params) => HomePage(router)));
 
     ///重置密码
-    router.define(userResetPassPage, 
-        handler: Handler(handlerFunc: (context, params) => UserResetPass(router)));  
+    router.define(userResetPassPage,
+        handler:
+            Handler(handlerFunc: (context, params) => UserResetPass(router)));
 
     ///重置密码【确认密码】
-    router.define(userResetPassPageTwo, 
-        handler: Handler(handlerFunc: (context, params) => UserResetPassTwo(router)));
+    router.define(userResetPassPageTwo,
+        handler: Handler(
+            handlerFunc: (context, params) => UserResetPassTwo(router)));
 
     ///城市选择
-    router.define(citySelectPage, 
+    router.define(citySelectPage,
         handler: Handler(handlerFunc: (context, params) => CitySelect(router)));
 
     Routes.router = router;
-  }   
+  }
 }

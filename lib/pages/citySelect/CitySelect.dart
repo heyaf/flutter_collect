@@ -4,7 +4,7 @@ import 'package:azlistview/azlistview.dart';
 import 'package:lpinyin/lpinyin.dart';
 import 'package:yay_collect/config/HttpUrlservices.dart';
 import 'package:dio/dio.dart';
-import 'package:fluro/src/router.dart';
+import 'package:fluro/fluro.dart';
 import 'package:yay_collect/config/FontsConfig.dart';
 import 'package:yay_collect/pages/home/CitySearchPage.dart';
 import 'package:yay_collect/pages/home/HomePage.dart';
@@ -14,9 +14,9 @@ import 'package:yay_collect/utils/SharedPreferencesUtils.dart';
 import 'CityModel.dart';
 
 class CitySelect extends StatefulWidget {
-  Router router;
+  FluroRouter router;
   String cityName;
-  CitySelect(Router router, {Key key, String cityName}) {
+  CitySelect(FluroRouter router, {Key key, String cityName}) {
     this.router = router;
     this.cityName = cityName;
   }

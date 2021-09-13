@@ -59,7 +59,7 @@ class _UserLoginState extends State<UserLogin> with WidgetsBindingObserver {
 
     ScreenUtil.init(context, width: 750, height: 1334, allowFontScaling: true);
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      // resizeToAvoidBottomPadding: false,
       resizeToAvoidBottomInset: false,
       body: Material(
         color: Colors.white,

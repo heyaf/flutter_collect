@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:dio/dio.dart';
-import 'package:fluro/src/router.dart';
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,11 +15,11 @@ import '../../router/CustomAnimationRouter.dart';
 import 'dart:convert' as convert;
 
 class HomePage extends StatefulWidget {
-  Router router;
+  FluroRouter router;
   String cityName;
   Map param;
 
-  HomePage(Router router, {this.param, Key key, String cityName}) {
+  HomePage(FluroRouter router, {this.param, Key key, String cityName}) {
     this.router = router;
     this.cityName = cityName;
     this.param = param;
@@ -32,8 +32,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String cityName;
   Map param;
-  _HomePageState(Router router, {String cityName}) {
-    this.router = router;
+  _HomePageState(FluroRouter router, {String cityName}) {
+    this.router = router as Router;
     this.cityName = cityName;
   }
 

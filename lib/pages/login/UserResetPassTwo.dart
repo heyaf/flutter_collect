@@ -14,8 +14,8 @@ import '../../config/HttpUrlServices.dart';
 import '../../utils/ToastUtils.dart';
 
 class UserResetPassTwo extends StatefulWidget {
-  Router router;
-  UserResetPassTwo(Router router, {Key key}) {
+  FluroRouter router;
+  UserResetPassTwo(FluroRouter router, {Key key}) {
     this.router = router;
   }
 
@@ -317,9 +317,9 @@ class _UserResetPassTwoState extends State<UserResetPassTwo> {
     } else if (_passOneEditController.text
             .compareTo(_passTwoEditController.text) !=
         0) {
-      ToastUtils.showText(context, msg:'两次密码输入不一致，请重新输入');
+      ToastUtils.showText(context, msg: '两次密码输入不一致，请重新输入');
     } else if (_passOneEditController.text.length < 6) {
-      ToastUtils.showText(context, msg:'密码长度应在6-20位之间，请重新输入');
+      ToastUtils.showText(context, msg: '密码长度应在6-20位之间，请重新输入');
     } else {
       updateUserinfo();
     }
@@ -346,12 +346,10 @@ class _UserResetPassTwoState extends State<UserResetPassTwo> {
         Navigator.pushNamed(context, '/');
       } else {
         List<String> datalist = dataValue.split('&');
-        ToastUtils.showText(context, msg:datalist[1]);
+        ToastUtils.showText(context, msg: datalist[1]);
       }
     } catch (e) {
       print(e);
     }
   }
-
-
 }
